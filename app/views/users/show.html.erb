@@ -1,4 +1,8 @@
-<%= @user.username %>
-<%= @user.email %>
-<%= @user.id %>
+<h3>Events created by <%= @user.username %></h3>
+<% @user.created_events.each do |event| %>
+<div>
+<%= event.title %>
+</div>
+<% end %>
+
 <%=link_to"Log out", logout_path, method: :delete %>
