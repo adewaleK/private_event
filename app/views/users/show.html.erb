@@ -1,15 +1,25 @@
-<% if (logged_in? && @user==current_user) %>
+<% if (logged_in? && @user.id==current_user.id) %>
+<h3>Events created by <%= @user.username %></h3>
   <% if !@user.created_events.empty? %>
-  <h3>Events created by <%= @user.username %></h3>
     <% @user.created_events.each do |event| %>
       <div>
         <%= event.title %>
       </div>
     <% end %>
- <% else %>
-   <h3>No events created by this user yet</h3>
- <% end %>
+  <% else %>
+   <p>No events created by this user yet</p>
+  <% end %>
 
+  <h3>Events attended by <%= @user.username %></h3>
+  <% if !@user.attended_events.empty? %>
+    <% @user.attended_events.each do |event| %>
+      <div>
+        <%= event.title %>
+      </div>
+    <% end %>
+  <% else %>
+   <p>This user is not attending any events</p>
+  <% end %>
 <% else %>
 <br>
 <%= link_to "Login First", login_path%>
