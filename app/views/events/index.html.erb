@@ -1,5 +1,8 @@
+<h1>All Events</h1>
+<p>click on each event to see the creator<p>
 <% @events.each do |event| %>
   <div>
-    <%= event.title %>
+    <%= link_to event.title, event_path(event) %>
+    
   </div>
 <% end %>

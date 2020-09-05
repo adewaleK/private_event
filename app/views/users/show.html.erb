@@ -1,8 +1,9 @@
 <h3>Events created by <%= @user.username %></h3>
+
 <% @user.created_events.each do |event| %>
 <div>
 <%= event.title %>
 </div>
 <% end %>
-
-<%=link_to"Log out", logout_path, method: :delete %>
+<%= link_to "Log out", logout_path, method: :delete %>
+<%= link_to "Create event", new_event_path %>

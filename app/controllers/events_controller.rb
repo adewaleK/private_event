@@ -20,6 +20,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    #@event.creator.id = current_user.id
+    @creator = @event.creator
   end
 
   private
