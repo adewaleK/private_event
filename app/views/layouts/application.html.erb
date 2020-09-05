@@ -10,6 +10,21 @@
   </head>
 
   <body>
+    <div class='nav-bar'>
+    <div class='nav-content'>
+     <div><%= link_to "Private Event" %></div>
+     <div>
+       <%= link_to "Sign up", new_user_path %>
+       <% if logged_in? %>
+       <%= link_to "Logout", logout_path, method: :delete %>
+       <% else %>
+       <%= link_to "Login", login_path %>
+       <% end %>
+     </div>
+    </div>
+    </div>
+    <div class='main-container'>
     <%= yield %>
+    <div>
   </body>
 </html>
