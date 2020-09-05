@@ -40,4 +40,11 @@
 
 .nav-link {
   margin-right: 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: orangered;
 }
