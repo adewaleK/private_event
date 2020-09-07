@@ -1,4 +1,4 @@
-<h1>All Events</h1>
+<h2>All Events</h2>
 <p>click on each event to see the creator<p>
 <% @events.each do |event| %>
   <div>
@@ -6,7 +6,7 @@
   </div>
 <% end %>
 
-<h1>Past Events</h1>
+<h2>Past Events</h2>
 <% if !@past_events.empty? %>
   <% @past_events.each do |event| %>
     <p><%= event.title %></p>
@@ -15,7 +15,7 @@
   <p>There is no any past events</p>
 <% end %>
 
-<h1>Upcoming Events</h1>
+<h2>Upcoming Events</h2>
 <% if !@upcoming.empty? %>
   <% @upcoming.each do |event| %>
   <p><%= event.title %></p>
