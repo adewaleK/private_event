@@ -5,3 +5,21 @@
     <%= link_to event.title, event_path(event) %>
   </div>
 <% end %>
+
+<h1>Past Events</h1>
+<% if !@past_events.empty? %>
+  <% @past_events.each do |event| %>
+    <p><%= event.title %></p>
+  <% end %>
+<% else %>
+  <p>There is no any past events</p>
+<% end %>
+
+<h1>Upcoming Events</h1>
+<% if !@upcoming.empty? %>
+  <% @upcoming.each do |event| %>
+  <p><%= event.title %></p>
+  <% end %>
+<% else %>
+  <p>There is no any upcoming events</p>
+<% end %>
