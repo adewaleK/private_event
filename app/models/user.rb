@@ -18,14 +18,11 @@ class User < ApplicationRecord
   #   return @past_events
   # end
 
-  def future_events
-    @future_events = []
-    self.created_events.each do |event|
-        datetime = event.date
-        if datetime >= Date.today
-        @future_events << event
-        end
-    end
-    return @future_events
-end
+  def upcoming_events
+    attended_events.where('date > date(\'now\')')
+  end
+
+  def previous_events
+    attended_events.where('date < date(\'now\')')
+  end
 end

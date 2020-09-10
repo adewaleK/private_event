@@ -1,18 +1,25 @@
+<div class="form-box" >
 <h1>Sign up</h1>
-
 <%= form_for(@user) do |f| %>
+  <div>
   <%= f.label :username %>
   <%= f.text_field :username %>
-  <br>
+  </div>
+  <div>
   <%= f.label :email %>
   <%= f.text_field :email %>
-  <br>
+  </div>
+  <div>
   <%= f.label :password %>
   <%= f.password_field :password %>
-  <br>
+  </div>
+  <div>
   <%=f.label:password_confirmation,"Confirmation"%>
   <%=f.password_field:password_confirmation%>
-  <br><br>
+  </div>
+  <div>
   <%= submit_tag "Create account" %>
+  </div>
   <p>Already have an account?<%=link_to"Login!", login_path%></p>
 <% end %>
+</div>

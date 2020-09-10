@@ -1,24 +1,56 @@
 <% if (logged_in? && @user.id==current_user.id) %>
-<h3>Events created by <%= @user.username %></h3>
+  <h3>Events created by <%= @user.username %></h3>
   <% if !@user.created_events.empty? %>
     <% @user.created_events.each do |event| %>
-      <div>
-        <%= event.title %>
+      <div class="event-box">
+        <p><span>Tittle:</span> <%= event.title %></p>
+        <p><span>Description:</span> <%= event.description %></p>
+        <p><span>Location: </span><%= event.location %></p>
+        <p><span>Date: </span><%= event.date %></p>
       </div>
     <% end %>
   <% else %>
-   <p>No events created by this user yet</p>
+   <p>No events created by <%= @user.username %></p>
   <% end %>
 
   <h3>Events attended by <%= @user.username %></h3>
   <% if !@user.attended_events.empty? %>
     <% @user.attended_events.each do |event| %>
-      <div>
-        <%= event.title %>
+      <div class="event-box">
+        <p><span>Tittle :</span><%= event.title %></p>
+        <p><span>Description:</span> <%= event.description %></p>
+        <p><span>Location: </span><%= event.location %></p>
+        <p><span>Date: </span><%= event.date %></p>
       </div>
     <% end %>
   <% else %>
-   <p>This user is not attending any events</p>
+   <p><%= @user.username %> is not attending any events</p>
+  <% end %>
+  <h3><%= @user.username %>'s Upcoming Events</h3>
+  <% if !@user.upcoming_events.empty? %>
+    <% @user.upcoming_events.each do |event| %>
+      <div class="event-box">
+        <p><span>Tittle: </span><%= event.title %></p>
+        <p><span>Description:</span> <%= event.description %></p>
+        <p><span>Location: </span><%= event.location %></p>
+        <p><span>Date: </span><%= event.date %></p>
+      </div>
+    <% end %>
+  <% else %>
+   <p><%= @user.username %> does not have any upcoming events</p>
+  <% end %>
+  <h3><%= @user.username %>'s Previous Events</h3>
+  <% if !@user.previous_events.empty? %>
+    <% @user.previous_events.each do |event| %>
+      <div class="event-box">
+        <p><span>Tittle: </span><%= event.title %></p>
+        <p><span>Description:</span> <%= event.description %></p>
+        <p><span>Location: </span><%= event.location %></p>
+        <p><span>Date: </span><%= event.date %></p>
+      </div>
+    <% end %>
+  <% else %>
+   <p><%= @user.username %> does not have any previous events</p>
   <% end %>
 <% else %>
 <br>
