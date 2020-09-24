@@ -33,4 +33,10 @@ RSpec.describe User, type: :model do
       expect(person).to have_attributes(email: 'jj@jj.com')
     end
   end
+
+  context 'Associations' do
+    it { should have_many(:attended_events).through(:guests) }
+    it { should have_many(:guests) }
+    it { should have_many(:created_events).with_foreign_key('creator_id') }
+  end
 end

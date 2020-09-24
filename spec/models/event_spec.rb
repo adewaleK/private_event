@@ -29,5 +29,11 @@ RSpec.describe Event, type: :model do
       expect(event.valid?).to eql(false)
     end
   end
+
+  context 'Associations' do
+    it { should belong_to(:creator).class_name('User') }
+    it { should have_many(:guests) }
+    it { should have_many(:attendees).through(:guests) }
+  end
 end
   
