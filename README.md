@@ -39,7 +39,7 @@ For more details about the Project and it's requirements go to <a href="https://
 ## A Uer's Event Page Showing Their Past and Upcoming Events
 ![screenshot](app/assets/images/user_events.png)
 
-## A Single Event Page Showing The Creator Name and List of Attendees
+## A Single Event Page Showing The Creator Name and List of all Attendees
 ![screenshot](app/assets/images/single_event.png)
 
 ### Built With
