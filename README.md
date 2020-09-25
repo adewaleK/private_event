@@ -37,11 +37,30 @@ For more details about the Project and it's requirements go to <a href="https://
 
 * [RAILS]
 * [VS-CODE]
+* [Ruby]
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Clone or fork the repo <https://github.com/adewaleK/private_event.git> to get a copy and explore the content of the Private-Events project.
+1. Clone or fork the repo <https://github.com/adewaleK/private_event.git> to get a copy and explore the content of the Private-Events project.
+2. Open the terminal, navigate to the cloned repository and run: bundle install
+3. Run $ rails db:migrate
+4. Run $ rails server or rails s
+5. Load the project at localhost:3000 in a browser
+
+<!-- RUNNING TEST -->
+## How to Run Tests
+
+The project is equipped with both unit tests for models validations and associations(Rspec) and integration tests for authentication and event management(Rspec + Capybara).
+1. Open the terminal, navigate to the cloned repository and run: bundle install
+2. Run $ rspec spec/models for all model tests
+3. Run $ rspec spec/models/user_spec.rb for User(model) validations and associations
+4. Run $ rspec spec/models/event_spec.rb for Event(model) validations and associations
+5. Run $ rspec spec/models/user_spec.rb for Guest(model) validations and associations
+6. Run $ rspec spec/feature for all integration tests
+7. Run $ rspec spec/feature/login_spec for integration test on authentication
+8. Run $ rspec spec/feature/event_spec for integration tests on event management
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
