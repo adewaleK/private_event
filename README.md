@@ -36,8 +36,8 @@ For more details about the Project and it's requirements go to <a href="https://
 ## Home Page Showing List of All Past and Upcoming Events
 ![screenshot](app/assets/images/events.png)
 
-## A USER's Event Page Showing Their Past and Upcoming Events
-![screenshot](app/assets/images/user's_event_page.png)
+## A Uer's Event Page Showing Their Past and Upcoming Events
+![screenshot](app/assets/images/user_events.png)
 
 ## A Single Event Page Showing The Creator Name and List of Attendees
 ![screenshot](app/assets/images/single_event.png)
