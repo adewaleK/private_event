@@ -45,10 +45,11 @@ Style:
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
+  Enabled: false
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/MultilineMethodCallIndentation:
-  Enabled: true
+  Enabled: false
   EnforcedStyle: indented
 Lint/RaiseException:
   Enabled: false
