@@ -33,8 +33,14 @@ This model is used to hold information of every event. It stores information in 
 <br>
 For more details about the Project and it's requirements go to <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations"> The Odin Project</a>
 
-## Images
+## Home Page Showing List of All Past and Upcoming Events
 ![screenshot](app/assets/images/events.png)
+
+## A USER's Event Page Showing Their Past and Upcoming Events
+![screenshot](app/assets/images/user's_event_page.png)
+
+## A Single Event Page Showing The Creator Name and List of Attendees
+![screenshot](app/assets/images/single_event.png)
 
 ### Built With
 
