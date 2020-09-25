@@ -1,0 +1,34 @@
+<h3>All Events</h3>
+<p>click on each event to see the creator<p>
+<br>
+<% @events.each do |event| %>
+    <p><%= link_to event.title, event_path(event), class:"events" %></p>
+<% end %>
+
+<h3>Past Events</h3>
+<% if !@past_events.empty? %>
+  <% @past_events.each do |event| %>
+    <div class="event-box">
+    <p><span>Tittle:</span> <%= event.title %></p>
+    <p><span>Description:</span> <%= event.description %></p>
+    <p><span>Location: </span><%= event.location %></p>
+    <p><span>Date: </span><%= event.date %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>There is no any past events</p>
+<% end %>
+
+<h3>Upcoming Events</h3>
+<% if !@upcoming.empty? %>
+  <% @upcoming.each do |event| %>
+    <div class="event-box">
+    <p><span>Tittle:</span> <%= event.title %></p>
+    <p><span>Description:</span> <%= event.description %></p>
+    <p><span>Location: </span><%= event.location %></p>
+    <p><span>Date: </span><%= event.date %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>There is no any upcoming events</p>
+<% end %>

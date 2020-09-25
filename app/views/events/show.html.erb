@@ -1,0 +1,11 @@
+<div class='event-show'>
+<h3>This event was created by: <span><%= @creator.username %></span></h3>
+<h3>List of Attendees</h3>
+<% if !@event.attendees.empty? %>
+  <% @event.attendees.each do |attendee| %>
+    <p><%= attendee.username %><p>
+  <% end %>
+<% else %>
+  <p>No any attendees recorded for this event<p>
+<% end %>
+</div>

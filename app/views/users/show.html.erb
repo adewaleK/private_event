@@ -1,0 +1,6 @@
+<% if (logged_in? && @user.id==current_user.id) %>
+  <%= render 'users_event' %>
+<% else %>
+  <br>
+<%= link_to "Login First", login_path%>
+<% end %>

@@ -10,13 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_29_160759) do
+ActiveRecord::Schema.define(version: 2020_09_05_163952) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "location"
+    t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "creator_id"
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "event_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
