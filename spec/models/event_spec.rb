@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
   let(:user) { User.create(username: 'keller', email: 'jsjs@jsjsee.com', password: 'passworddd') }
-  let(:event) { user.created_events.build(title: 'my first event', description: 'best event of the year', location: 'London', date: '2020-07-09') }
+  let(:event) { user.created_events.build(title: 'my first event', 
+  description: 'best event of the year', location: 'London', date: '2020-07-09') }
 
   context 'Validation' do
     it 'ensures the user is signed in and the event has a creator' do
@@ -36,4 +37,3 @@ RSpec.describe Event, type: :model do
     it { should have_many(:attendees).through(:guests) }
   end
 end
-  
