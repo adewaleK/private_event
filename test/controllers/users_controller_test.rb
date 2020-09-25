@@ -8,8 +8,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test 'should get show' do
     @user = User.create(username: 'name', email: 'email',
-    password: 'password', password_confirmation: 'password')
-    get user_path(@user)
-    assert_response :success
+      password: 'password', password_confirmation: 'password')
+      get user_path(@user)
+      assert_response :success
   end
 end
