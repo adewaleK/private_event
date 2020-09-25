@@ -33,6 +33,9 @@ This model is used to hold information of every event. It stores information in 
 <br>
 For more details about the Project and it's requirements go to <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations"> The Odin Project</a>
 
+## Images
+![screenshot](images/login.png)
+
 ### Built With
 
 * [RAILS]
